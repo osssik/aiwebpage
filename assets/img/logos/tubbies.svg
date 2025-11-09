@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 160 40" role="img" aria-label="Tubbies logo">
+  <g transform="translate(6,6)">
+    <circle cx="10" cy="14" r="10" fill="#ffffff" />
+    <path d="M6 10h12v8H6z" fill="#ffffff" />
+  </g>
+  <text x="46" y="26" font-family="Manrope, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Tubbies</text>
+</svg>

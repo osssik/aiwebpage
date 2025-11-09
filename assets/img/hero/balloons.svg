@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" fill="none">
+  <!-- Transparent background (no rect) -->
+  <defs>
+    <linearGradient id="gradRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF7A7A"/>
+      <stop offset="100%" stop-color="#E63535"/>
+    </linearGradient>
+    <linearGradient id="gradBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#80C0FF"/>
+      <stop offset="100%" stop-color="#2B74FF"/>
+    </linearGradient>
+    <linearGradient id="gradGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#98F3B1"/>
+      <stop offset="100%" stop-color="#2BBE59"/>
+    </linearGradient>
+    <linearGradient id="gradYellow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE58A"/>
+      <stop offset="100%" stop-color="#FFB703"/>
+    </linearGradient>
+    <linearGradient id="gradPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E2B6FF"/>
+      <stop offset="100%" stop-color="#8A36E5"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <clipPath id="balloonClip">
+      <ellipse cx="0" cy="0" rx="85" ry="110"/>
+    </clipPath>
+  </defs>
+
+  <g transform="translate(400,380)" filter="url(#softShadow)">
+    <!-- Strings -->
+    <g stroke="#9B6F3D" stroke-width="2" fill="none">
+      <path d="M -140,160 C -130,260 -150,360 -100,520"/>
+      <path d="M -60,170 C -50,260 -70,360 -40,520"/>
+      <path d="M 0,160 C 10,260 -10,360 5,520"/>
+      <path d="M 70,170 C 80,260 60,360 90,520"/>
+      <path d="M 140,160 C 150,260 130,360 180,520"/>
+    </g>
+
+    <!-- Balloons (each group: body ellipse + highlight) -->
+    <g transform="translate(-140,60)">
+      <g clip-path="url(#balloonClip)">
+        <ellipse cx="0" cy="0" rx="85" ry="110" fill="url(#gradBlue)"/>
+        <ellipse cx="-25" cy="-40" rx="25" ry="35" fill="#FFFFFF" opacity="0.45"/>
+      </g>
+      <path d="M0,110 l10,18 -20,0 z" fill="#9B6F3D"/>
+    </g>
+
+    <g transform="translate(-60,40)">
+      <g clip-path="url(#balloonClip)">
+        <ellipse cx="0" cy="0" rx="85" ry="110" fill="url(#gradGreen)"/>
+        <ellipse cx="-25" cy="-40" rx="25" ry="35" fill="#FFFFFF" opacity="0.45"/>
+      </g>
+      <path d="M0,110 l10,18 -20,0 z" fill="#9B6F3D"/>
+    </g>
+
+    <g transform="translate(0,20)">
+      <g clip-path="url(#balloonClip)">
+        <ellipse cx="0" cy="0" rx="85" ry="110" fill="url(#gradRed)"/>
+        <ellipse cx="-25" cy="-40" rx="25" ry="35" fill="#FFFFFF" opacity="0.45"/>
+      </g>
+      <path d="M0,110 l10,18 -20,0 z" fill="#9B6F3D"/>
+    </g>
+
+    <g transform="translate(70,40)">
+      <g clip-path="url(#balloonClip)">
+        <ellipse cx="0" cy="0" rx="85" ry="110" fill="url(#gradPurple)"/>
+        <ellipse cx="-25" cy="-40" rx="25" ry="35" fill="#FFFFFF" opacity="0.45"/>
+      </g>
+      <path d="M0,110 l10,18 -20,0 z" fill="#9B6F3D"/>
+    </g>
+
+    <g transform="translate(140,60)">
+      <g clip-path="url(#balloonClip)">
+        <ellipse cx="0" cy="0" rx="85" ry="110" fill="url(#gradYellow)"/>
+        <ellipse cx="-25" cy="-40" rx="25" ry="35" fill="#FFFFFF" opacity="0.45"/>
+      </g>
+      <path d="M0,110 l10,18 -20,0 z" fill="#9B6F3D"/>
+    </g>
+
+  </g>
+
+  <!-- Confetti -->
+  <g opacity="0.9">
+    <circle cx="120" cy="160" r="6" fill="#2B74FF"/>
+    <circle cx="720" cy="180" r="5" fill="#FF3366"/>
+    <circle cx="420" cy="120" r="4" fill="#2BBE59"/>
+    <circle cx="240" cy="540" r="5" fill="#FFB703"/>
+    <circle cx="620" cy="560" r="4" fill="#8A36E5"/>
+    <circle cx="100" cy="760" r="5" fill="#2BBE59"/>
+    <circle cx="700" cy="820" r="6" fill="#FF3366"/>
+  </g>
+</svg>

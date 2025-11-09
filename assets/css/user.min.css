@@ -1,0 +1,83 @@
+/* Custom overrides: Stylish rainbow backgrounds for dark sections and navbars */
+:root {
+  --rainbow-1: #ff6b6b;   /* red/coral */
+  --rainbow-2: #f7d794;   /* peach */
+  --rainbow-3: #ffd93d;   /* yellow */
+  --rainbow-4: #6bcb77;   /* green */
+  --rainbow-5: #4d96ff;   /* blue */
+  --rainbow-6: #9d4edd;   /* purple */
+}
+
+/* Base gradient token */
+:root {
+  --rainbow-gradient: linear-gradient(
+    135deg,
+    var(--rainbow-1) 0%,
+    var(--rainbow-2) 16%,
+    var(--rainbow-3) 33%,
+    var(--rainbow-4) 50%,
+    var(--rainbow-5) 66%,
+    var(--rainbow-6) 83%,
+    var(--rainbow-1) 100%
+  );
+}
+
+/* Smooth animated shift for a premium look */
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Apply to any dark section and nav variants */
+.bg-dark,
+.navbar.bg-dark,
+.navbar.navbar-dark,
+.container.bg-dark,
+section.bg-dark {
+  background-image: var(--rainbow-gradient) !important;
+  background-size: 300% 300% !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  animation: rainbowShift 24s ease-in-out infinite;
+}
+
+/* Keep text readable on rainbow backgrounds */
+.bg-dark .text-light,
+.bg-dark .text-white,
+.navbar.navbar-dark .navbar-nav .nav-link,
+.navbar.navbar-dark .navbar-brand {
+  color: #fff !important;
+}
+
+/* If a decorative bg image exists inside a dark block, soften it slightly */
+.bg-dark .bg-holder {
+  opacity: 0.25;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .bg-dark,
+  .navbar.bg-dark,
+  .navbar.navbar-dark,
+  .container.bg-dark,
+  section.bg-dark {
+    animation: none;
+    background-attachment: scroll !important;
+  }
+}
+
+/* Remove side shadows from Swiper components using helper class .swiper-shadow */
+.swiper-shadow::before,
+.swiper-shadow::after {
+  content: none !important;
+  display: none !important;
+  box-shadow: none !important;
+}
+
+/* Some themes add shadows directly on the container */
+.swiper-shadow,
+.swiper-container.swiper-shadow,
+.swiper.swiper-shadow {
+  box-shadow: none !important;
+}
